@@ -61,7 +61,7 @@ class Account extends Customer{
         Scanner depo = new Scanner(System.in);
         System.out.println("Enter amount you want  to withdraw:");
         double withdraw=depo.nextDouble();
-        if(withdraw > balance){ 
+        if(withdraw > balance || ((balance-withdraw)<300){ 
             System.out.println("You don't have enough money to withdraw !");
        
         }
