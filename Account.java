@@ -1,36 +1,74 @@
-public class Account {
-    private int AccountNbr;
-    private float Balance;
-    private String AccountOwner;
+import java.util.Scanner;
 
-    public Account(int accountNbr, float balance, String accountOwner) {
-        AccountNbr = accountNbr;
-        Balance = balance;
-        AccountOwner = accountOwner;
+class Account extends Customer{
+
+    private int  accnumber;
+    private double balance=300;
+    private String acctype;
+    private int phonenumber;
+
+    public Account() {
+        
     }
-
-    public int getAccountNbr() {
-        return AccountNbr;
+    public Account(int accnumber, double balance, String acctype, int phonenumber) {
+        this.accnumber = accnumber;
+        this.balance = balance;
+        this.acctype = acctype;
+        this.phonenumber = phonenumber;
     }
-
-    public void setAccountNbr(int accountNbr) {
-        AccountNbr = accountNbr;
+    public int getAccnumber() {
+        return accnumber;
     }
-
-    public float getBalance() {
-        return Balance;
+    public void setAccnumber(int accnumber) {
+        this.accnumber = accnumber;
     }
-
-    public void setBalance(float balance) {
-        Balance = balance;
+    public double getBalance() {
+        return balance;
     }
-
-    public String getAccountOwner() {
-        return AccountOwner;
+    
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
-
-    public void setAccountOwner(String accountOwner) {
-        AccountOwner = accountOwner;
+    public String getAcctype() {
+        return acctype;
+    }
+    public void setAcctype(String acctype) {
+        this.acctype = acctype;
+    }
+    public int getPhonenumber() {
+        return phonenumber;
+    }
+    public void setPhonenumber(int phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+    
+    public void deposit(){
+        Scanner depo = new Scanner(System.in);
+        System.out.println("Enter the amaount you want to deposite ");
+        double dep=depo.nextDouble();
+        if(dep<=0){ 
+            System.out.println("You enter invalid money ");
+       
+        }
+        else{
+            this.balance+=dep;
+            this.setBalance(balance);
+        
+    }
+    }
+    
+    public void withdraw(){
+        Scanner depo = new Scanner(System.in);
+        System.out.println("Enter amount you want  to withdraw:");
+        double withdraw=depo.nextDouble();
+        if(withdraw > balance){ 
+            System.out.println("You don't have enough money to withdraw !");
+       
+        }
+        else{
+            this.balance-=withdraw;
+            System.out.println("The new balance is "+getBalance());
+        }
     }
 
 }
