@@ -1,5 +1,5 @@
 class Bank {
-    private String BankName; // bank name property
+    private String BankName;
     private String BankLocation;
     private String BankAccountInfo;
 
