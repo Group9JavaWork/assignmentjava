@@ -51,7 +51,7 @@ public class App {
         System.out.println(" 1. Check balance ");
         System.out.println(" 2. Deposit ");
         System.out.println(" 3. Withdraw");
-
+        System.out.println(" 4. To exit");
         Account ac1 = new Account();
 
         int chooice = br.nextInt();
@@ -66,6 +66,9 @@ public class App {
                 break;
             case 3:
                 ac1.withdraw();
+                break;
+                case 4:
+                System.exit(status:0);
                 break;
             default:
 
