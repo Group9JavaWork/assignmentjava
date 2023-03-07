@@ -39,10 +39,10 @@ class Bank {
         BankAccountInfo = "equitybank@gamil.com";
     }
 
-    @Override
-    public String toString() {
-        return " The name of bank I use is: " + BankName + "\n My Bank Location is : " + BankLocation
-                + "\n My Bank  Info:" + BankAccountInfo;
-    }
+    // @Override
+    // public String toString() {
+    //     return " The name of bank I use is: " + BankName + "\n My Bank Location is : " + BankLocation
+    //             + "\n My Bank  Info:" + BankAccountInfo;
+    // }
 
 }
