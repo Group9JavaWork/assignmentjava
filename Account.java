@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//for checking
 class Account extends Customer{
 
     private int  accnumber;
